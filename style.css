@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    font-weight: 300;
+    background: #191919;
+    color: antiquewhite;
+    overflow: hidden;
+}
+
+
+#wrapper {
+    display: flex;
+}
+
+#page-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex: 1;
+}
+
+
+#page-right {
+    flex: 1;
+}
+
+/* SignIn-Content */
+
+#signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 8px;
+}
+
+.logo {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+form {
+    width: 85%;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+#signin label {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+#signin .text-input {
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    background: #191919;
+    color: #ccc;
+    line-height: 20px;
+}
+
+#signin .btn-primary {
+    width: 100%;
+}
+
+#signin .links,
+.btn-secondary,
+.option {
+    align-items: center;
+}
+
+#signin .links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 16PX;
+    text-align: center;
+    font-size: 12px;
+}
+
+#signin .option {
+    display: flex;
+    border: none;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#signin .option {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+#signin .option .bar-horizontal {
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #aaa;
+}
+
+
+#main-footer {
+    text-align: center;
+    color: #ccc;
+    font-size: 12px;
+    padding-top: 50px;
+}
+
+#main-footer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    color: #f96816;
+    text-decoration: underline;
+}
+
+
+/* buttons */
+.btn-primary {
+    padding: 6px;
+    height: 45px;
+    border-radius: 2px;
+    background-color: #f96816;
+    color: #ccc;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn-primary:hover {
+    background: #ffb724;
+}
+
+.btn-secondary {
+    padding: 12px 0;
+    height: 45px;
+    border-radius: 2px;
+    border: 1px solid lightgray;
+    text-decoration: none;
+    background-color: none;
+    color: #ccc;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.btn-secondary:hover {
+    border-color: #ffb724;
+    color: #ffb724;
+}
+
+/* showcase */
+
+#showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://pixabay.com/get/gb16c701489aa1ef3372bdd37c9fee166772217041daf4583f5bf12bfd05fac72006774cd8e23d19116baa274741eed5c1373659f00513c98de38b172e82ebaafc87e1a2aa6366e3a70c7ade20e7c42ae_1920.jpg') no-repeat center center / cover;
+    height: 100vh;
+}
+
+#showcase .showcase-text {
+    font-size: 40px;
+    font-weight: 500;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+#showcase .btn-secondary {
+    width: 60%;
+    align-items: center;
+    margin-left: 40%;
+    padding: 12px 10px;
+
+}
+
+/* Meadia-Queries */
+
+@media (min-width: 1200px) {
+    #page-left {
+        flex: 4;
+    }
+
+    #page-right {
+        flex: 6;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
+    #page-right {
+        display: none;
+    }
+
+    #page-left {
+        justify-content: start;
+        margin-top: 4vh;
+    }
+
+    #signin .logo {
+        margin-bottom: 2vh;
+    }
+
+    #signin .text-input {
+        margin-bottom: 12px;
+    }
+
+    #main-footer {
+        padding-top: 16px;
+    }
+}
